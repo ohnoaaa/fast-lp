@@ -403,6 +403,10 @@ common-style
 
 body {
   font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", "游ゴシック", "Yu Gothic", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  background: #fff;
+}
+body .none {
+  display: none;
 }
 
 input[type=submit],
@@ -503,12 +507,134 @@ header
 *************************************************/
 /*************************************************
 footer
-*************************************************/ /*************************************************
+*************************************************/
+/*************************************************
 top
 *************************************************/
-.text-19 {
-  font-size: 5rem;
-  color: #FFFD54;
+.kv {
+  height: 100vh;
+  background: url(../images/fv_01.png) no-repeat;
+  background-size: 60%;
+  background-position: top right;
+  position: relative;
+}
+.kv .logo {
+  width: 15%;
+  max-width: 210px;
+  min-width: 200px;
+  position: absolute;
+  top: 50%;
+  left: 53%;
+  transform: translate(-50%, -50%);
+}
+.kv .logo img {
+  object-fit: contain;
+}
+.kv .scrolldown1 {
+  writing-mode: vertical-rl;
+  position: absolute;
+  bottom: 5%;
+  right: 1%;
+}
+.kv .scrolldown1 p {
+  font-size: 1.2rem;
+}
+.kv .scrolldown1 span {
+  position: absolute;
+  bottom: -129%;
+  left: 40%;
+}
+.kv .scrolldown1 span::before {
+  content: "";
+  /*描画位置*/
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  /*丸の形状*/
+  width: 2px;
+  height: 10px;
+  background: #fff;
+  z-index: 20;
+  /*丸の動き1.6秒かけて透過し、永遠にループ*/
+  animation: circlemove 2s ease-in-out infinite, cirlemovehide 2s ease-out infinite;
+}
+.kv .scrolldown1 span::after {
+  content: "";
+  /*描画位置*/
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  /*線の形状*/
+  width: 1px;
+  height: 80px;
+  background: #333;
+}
+
+/*下からの距離が変化して丸の全体が上から下に動く*/
+@keyframes circlemove {
+  0% {
+    bottom: 80px;
+  }
+  100% {
+    bottom: -5px;
+  }
+}
+/*上から下にかけて丸が透過→不透明→透過する*/
+@keyframes cirlemovehide {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.jose {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 600;
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+/*=============================== 
+          concept
+=================================*/
+.top-concept {
+  margin-top: 12rem;
+  text-align: center;
+}
+.top-concept h2 {
+  font-size: 2.7rem;
+  font-weight: 500;
+  color: #404284;
+  font-family: "Noto Serif JP", serif;
+  letter-spacing: 0.2em;
+  margin-top: 4rem;
+}
+.top-concept .txtarea {
+  margin-top: 4rem;
+}
+.top-concept .txtarea p {
+  font-size: 1.4rem;
+  font-weight: 200;
+  line-height: 2;
+  margin-bottom: 3.6rem;
+}
+.top-concept .txtarea p:last-child {
+  margin-bottom: 0;
+}
+
+/*=============================== 
+          banner
+=================================*/
+.top-banner {
+  background: #F5F6F4;
+  padding: 8rem;
 }
 
 .test33 {

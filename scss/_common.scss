@@ -33,7 +33,10 @@ font-family: 'object-fit: cover;'
 body{
   font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro','メイリオ', 'Meiryo', '游ゴシック', 'Yu Gothic', 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
   // outline: 2px solid blue;
-
+  background: #fff;
+  .none{
+    display: none;
+  }
 }
 
 
@@ -54,7 +57,7 @@ outline-offset: -2px;
 }
 }
 
-$yg: #FFFD54; 
+$db: #404284; 
 // font-size の設定
 // https://stand-4u.com/css/css-fontsize.html
 
