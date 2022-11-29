@@ -139,4 +139,105 @@ top
 .top-banner{
   background: #F5F6F4;
   padding: 8rem;
+  margin: 8rem 0;
+  .container{
+    display: flex;
+    // justify-content: space-between;
+    justify-content: center;
+    column-gap: 5%;
+  }
+  .box{
+    overflow: hidden;
+    position: relative;
+    height: 220px;
+    min-width: 380px;
+    transition: .5s;
+    &::after{
+      transition: .4s;
+      content: '';
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: url(../images/banner01.jpg) no-repeat;
+      padding: 1.2rem 0;
+      background-size: cover;
+      background-position: center;
+      top: 0;
+      left: 0;
+      z-index: 0;
+    }
+  }
+  
+  .banner{
+    position: relative;
+    z-index: 1;
+    .logo-inner{
+      width: 45%;
+      padding-left: 2rem;
+      margin-top: 1.5rem;
+    }
+    .item{
+      font-size: 1rem;
+      border: 1px solid #fff;
+      padding: .2rem .5rem;
+      color: #fff;
+      width: fit-content;
+      margin-left: 2rem;
+      margin-top: 1.1rem;
+    }
+    .container{
+      display: flex;
+      margin-top: 9.5rem;
+      column-gap: 3.3rem;
+      justify-content: flex-start;
+      p{
+        background: #fff;
+        color: #664070;
+        font-family: v.$serif;
+        font-size: 2rem;
+        padding-left: 2rem;
+      }
+      .arrow{
+        width: 3.2rem;
+        transition: .4s;
+      }
+    }
+  }
+  .box:last-child{
+    &::after{
+      background-image: url(../images/banner02.jpg);
+    }
+    .banner{
+      text-align: left;
+      .container{
+        margin-top: 8rem;
+        align-items: flex-end;
+      }
+      p{
+        font-size: 1.6rem;
+        width: fit-content;
+        padding: 1px 1rem 0 2rem;
+      }
+    }
+  }
+  .box:hover{
+    opacity: 1;
+    border-radius: 10px;
+    &::after{
+      opacity: 1;
+      transform: scale(1.05);
+    }
+    .container{
+      .arrow{
+        transform: translateX( 2.6rem);
+      }
+    }
+  }
+}
+/*=============================== 
+          product 製品
+=================================*/
+.top-product{
+  
 }
