@@ -737,6 +737,65 @@ top
 .top-product {
   margin-top: 2rem;
 }
+.top-product .container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 6.8rem;
+  gap: 5vw;
+  justify-content: space-around;
+}
+.top-product .container .product-item {
+  flex-basis: 47%;
+  max-width: 330px;
+}
+.top-product .container .product-item .img img {
+  height: 280px;
+  object-fit: contain;
+}
+.top-product .container .product-item ul li {
+  text-align: center;
+}
+.top-product .container .product-item ul li h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+.top-product .container .product-item ul .price {
+  font-size: 1.4rem;
+  margin-top: 1vw;
+}
+.top-product .container .product-item ul .price span {
+  font-size: 1rem;
+  padding-left: 0.5rem;
+}
+.top-product .container .product-item ul .post {
+  font-size: 1rem;
+  border: 1px solid #000;
+  padding: 2px 1rem;
+  width: fit-content;
+  margin: 0.6vw auto;
+}
+.top-product .container .product-item ul .link {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.8vvw;
+}
+.top-product .container .product-item ul .link .tgl {
+  position: relative;
+  font-size: 1.4rem;
+}
+.top-product .container .product-item ul .link .tgl::before {
+  content: "";
+  width: 8.5px;
+  height: 8px;
+  background: url(../images/tggl-r.png) no-repeat;
+  background-size: contain;
+  display: inline-block;
+  position: absolute;
+  left: -1.2rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
 
 .test33 {
   color: #367abd;
