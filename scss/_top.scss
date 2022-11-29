@@ -245,19 +245,24 @@ top
 .top-product{
   margin-top: 2rem;
   .container{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    // display: flex;
+    // flex-direction: row;
+    // flex-wrap: wrap;
+    // justify-content: space-around;
     margin-top: 6.8rem;
-    gap: 5vw;
-    justify-content: space-around;
+    gap: 7vw 1vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    // grid-template-columns: repeat(auto-fit, 100px);
+    justify-items: center;
     .product-item{
       flex-basis: 47%;
       max-width: 330px;
       .img{
         img{
           height: 280px;
-        object-fit: contain;
+          object-fit: contain;
+          object-position: top;
         }
       }
       ul{
@@ -266,6 +271,7 @@ top
           h3{
             font-size: 1.6rem;
             font-weight: 600;
+            line-height: 1.5;
           }
         }
         .price{
@@ -285,7 +291,7 @@ top
         }
         .link{
           display: flex;
-          justify-content: space-between;
+          justify-content: space-evenly;
           margin-top: .8vvw;
           .tgl{
             position: relative;
@@ -301,10 +307,106 @@ top
               left: -1.2rem;
               top: 50%;
               transform: translateY(-50%);
+              transition: .3s;
+            }
+          }
+          a:hover{
+            .tgl::before{
+              left: -.8rem;
+              color: #404284;
             }
           }
         }
       }
+    }
+    .gift{
+      .img{
+        position: relative;
+        p{
+          position: absolute;
+          background: #A31623;
+          color: #fff;
+          font-size: 1.2rem;
+          top: 0;
+          padding: 5px 1rem;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+/*=============================== 
+          footer
+=================================*/
+footer{
+  background: url(../images/footer.jpg) no-repeat;
+  object-fit: cover;
+  padding: 8rem 0;
+  margin-top: 15rem;
+  .container{
+    display: flex;
+    color: #fff;
+    column-gap: 1vw;
+    p,h3,li{
+      font-size: 1.4rem;
+      letter-spacing: .1em;
+      font-weight: 200;
+    }
+    a{
+      display: inline;
+      font-size: 1.4rem;
+      letter-spacing: .1em;
+      font-weight: 200;
+    }
+    .box{
+      h2{
+        width: 50%;
+      }
+      h3{
+        margin-top: 4rem;
+      }
+      .adress{
+        margin-top: 2rem;
+      }
+      .info{
+        margin-top: 2rem;
+        li{
+          line-height: 1.7;
+        }
+      }
+      nav{
+        ul{
+          li{
+            margin: 1rem 0;
+            padding-left: 2rem;
+          }
+        }
+        .tgl{
+          letter-spacing: 0;
+          position: relative;
+          &::before{
+            content: '';
+            width: 5px;
+            height: 8px;
+            background: url(../images/w-tgl-r.png) no-repeat;
+            position: absolute;
+            background-size: contain;
+            top: 50%;
+            left: -1.6rem;
+            transform: translateY(-50%);
+            transition: .3s;
+          }
+        }
+      }
+      a:hover{
+        &::before{
+          left: -1rem;
+          // left: auto;
+        }
+      }
+    }
+    .box:first-child{
+      padding-left: 5vw;
     }
   }
 }

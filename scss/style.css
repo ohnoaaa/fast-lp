@@ -738,12 +738,11 @@ top
   margin-top: 2rem;
 }
 .top-product .container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
   margin-top: 6.8rem;
-  gap: 5vw;
-  justify-content: space-around;
+  gap: 7vw 1vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
 }
 .top-product .container .product-item {
   flex-basis: 47%;
@@ -752,6 +751,7 @@ top
 .top-product .container .product-item .img img {
   height: 280px;
   object-fit: contain;
+  object-position: top;
 }
 .top-product .container .product-item ul li {
   text-align: center;
@@ -759,6 +759,7 @@ top
 .top-product .container .product-item ul li h3 {
   font-size: 1.6rem;
   font-weight: 600;
+  line-height: 1.5;
 }
 .top-product .container .product-item ul .price {
   font-size: 1.4rem;
@@ -777,7 +778,7 @@ top
 }
 .top-product .container .product-item ul .link {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   margin-top: 0.8vvw;
 }
 .top-product .container .product-item ul .link .tgl {
@@ -795,6 +796,90 @@ top
   left: -1.2rem;
   top: 50%;
   transform: translateY(-50%);
+  transition: 0.3s;
+}
+.top-product .container .product-item ul .link a:hover .tgl::before {
+  left: -0.8rem;
+  color: #404284;
+}
+.top-product .container .gift .img {
+  position: relative;
+}
+.top-product .container .gift .img p {
+  position: absolute;
+  background: #A31623;
+  color: #fff;
+  font-size: 1.2rem;
+  top: 0;
+  padding: 5px 1rem;
+  font-weight: 600;
+}
+
+/*=============================== 
+          footer
+=================================*/
+footer {
+  background: url(../images/footer.jpg) no-repeat;
+  object-fit: cover;
+  padding: 8rem 0;
+  margin-top: 15rem;
+}
+footer .container {
+  display: flex;
+  color: #fff;
+  column-gap: 1vw;
+}
+footer .container p, footer .container h3, footer .container li {
+  font-size: 1.4rem;
+  letter-spacing: 0.1em;
+  font-weight: 200;
+}
+footer .container a {
+  display: inline;
+  font-size: 1.4rem;
+  letter-spacing: 0.1em;
+  font-weight: 200;
+}
+footer .container .box h2 {
+  width: 50%;
+}
+footer .container .box h3 {
+  margin-top: 4rem;
+}
+footer .container .box .adress {
+  margin-top: 2rem;
+}
+footer .container .box .info {
+  margin-top: 2rem;
+}
+footer .container .box .info li {
+  line-height: 1.7;
+}
+footer .container .box nav ul li {
+  margin: 1rem 0;
+  padding-left: 2rem;
+}
+footer .container .box nav .tgl {
+  letter-spacing: 0;
+  position: relative;
+}
+footer .container .box nav .tgl::before {
+  content: "";
+  width: 5px;
+  height: 8px;
+  background: url(../images/w-tgl-r.png) no-repeat;
+  position: absolute;
+  background-size: contain;
+  top: 50%;
+  left: -1.6rem;
+  transform: translateY(-50%);
+  transition: 0.3s;
+}
+footer .container .box a:hover::before {
+  left: -1rem;
+}
+footer .container .box:first-child {
+  padding-left: 5vw;
 }
 
 .test33 {
