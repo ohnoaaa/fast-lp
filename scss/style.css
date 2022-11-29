@@ -527,6 +527,11 @@ top
   left: 53%;
   transform: translate(-50%, -50%);
 }
+@media screen and (min-width: 1499px) {
+  .kv .logo {
+    left: 50%;
+  }
+}
 .kv .logo img {
   object-fit: contain;
 }
@@ -729,6 +734,10 @@ top
 /*=============================== 
           product 製品
 =================================*/
+.top-product {
+  margin-top: 2rem;
+}
+
 .test33 {
   color: #367abd;
 }

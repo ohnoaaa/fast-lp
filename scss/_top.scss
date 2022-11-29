@@ -1,6 +1,7 @@
 @use "_common" as c;
 @use "global/_variable" as v;
 // font-family: v.$serif;
+// @include c.mq(lg)
 
 
 /*************************************************
@@ -21,6 +22,9 @@ top
     top: 50%;
     left: 53%;
     transform: translate( -50%, -50%);
+    @include c.mq(lg){
+      left: 50%;
+    }
     img{
       object-fit: contain;
     }
@@ -239,5 +243,5 @@ top
           product 製品
 =================================*/
 .top-product{
-  
+  margin-top: 2rem;
 }
