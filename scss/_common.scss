@@ -13,7 +13,7 @@ common-style
 // PC基準でコーディングする場合
 $breakpoints: (
   "sp": "screen and (max-width: 400px)",
-  "sm": "screen and (max-width: 599px)", //スマホ
+  "sm": "screen and (max-width: 768px)", //スマホ
   "md": "screen and (max-width: 1024px)", //タブレット
   "lg": "screen and (min-width: 1499px)", //大きめデスクトップ
 ) !default;
@@ -26,10 +26,7 @@ $breakpoints: (
 *{
   box-sizing: border-box;
 }
-.ie_ObjectFit {
-object-fit: cover;
-font-family: 'object-fit: cover;'
-}
+
 
 body{
   font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro','メイリオ', 'Meiryo', '游ゴシック', 'Yu Gothic', 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;

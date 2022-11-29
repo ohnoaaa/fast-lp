@@ -396,11 +396,6 @@ common-style
   box-sizing: border-box;
 }
 
-.ie_ObjectFit {
-  object-fit: cover;
-  font-family: "object-fit: cover;";
-}
-
 body {
   font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", "游ゴシック", "Yu Gothic", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
   background: #fff;
@@ -485,7 +480,7 @@ body .sp, body .ssp {
 body .pc-tb {
   display: block;
 }
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 768px) {
   body .pc, body .ssp {
     display: none;
   }
@@ -513,10 +508,18 @@ top
 *************************************************/
 .kv {
   height: 100vh;
+  width: 100vw;
   background: url(../images/fv_01.png) no-repeat;
-  background-size: 60%;
+  background-size: 55%;
   background-position: top right;
   position: relative;
+}
+@media screen and (max-width: 768px) {
+  .kv {
+    background-position: top center;
+    background: url(../images/sp-fv-bg.png) no-repeat;
+    background-size: auto;
+  }
 }
 .kv .logo {
   width: 15%;
@@ -524,12 +527,19 @@ top
   min-width: 200px;
   position: absolute;
   top: 50%;
-  left: 53%;
+  left: 50%;
   transform: translate(-50%, -50%);
 }
 @media screen and (min-width: 1499px) {
   .kv .logo {
-    left: 50%;
+    left: 46%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .kv .logo {
+    width: 40%;
+    max-width: none;
+    min-width: auto;
   }
 }
 .kv .logo img {
@@ -620,9 +630,16 @@ top
   font-family: "Noto Serif JP", serif;
   letter-spacing: 0.2em;
   margin-top: 4rem;
+  line-height: 1.8;
 }
 .top-concept .txtarea {
   margin-top: 4rem;
+}
+@media screen and (max-width: 768px) {
+  .top-concept .txtarea {
+    width: 90%;
+    margin: 4rem auto;
+  }
 }
 .top-concept .txtarea p {
   font-size: 1.4rem;
@@ -641,11 +658,26 @@ top
   background: #F5F6F4;
   padding: 8rem;
   margin: 8rem 0;
+  width: 100vw;
+}
+@media screen and (max-width: 768px) {
+  .top-banner {
+    padding: 3.5rem 0;
+  }
 }
 .top-banner .container {
   display: flex;
   justify-content: center;
   column-gap: 5%;
+}
+@media screen and (max-width: 768px) {
+  .top-banner .container {
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+    row-gap: 4.3rem;
+    align-items: center;
+  }
 }
 .top-banner .box {
   overflow: hidden;
@@ -653,6 +685,13 @@ top
   height: 220px;
   min-width: 380px;
   transition: 0.5s;
+}
+@media screen and (max-width: 768px) {
+  .top-banner .box {
+    min-width: auto;
+    height: 175px;
+    width: 320px;
+  }
 }
 .top-banner .box::after {
   transition: 0.4s;
@@ -670,13 +709,21 @@ top
   z-index: 0;
 }
 .top-banner .banner {
-  position: relative;
+  position: absolute;
+  width: 100%;
+  height: 100%;
   z-index: 1;
+  top: 0;
 }
 .top-banner .banner .logo-inner {
   width: 45%;
   padding-left: 2rem;
   margin-top: 1.5rem;
+}
+@media screen and (max-width: 768px) {
+  .top-banner .banner .logo-inner {
+    width: 47%;
+  }
 }
 .top-banner .banner .item {
   font-size: 1rem;
@@ -687,11 +734,25 @@ top
   margin-left: 2rem;
   margin-top: 1.1rem;
 }
+@media screen and (max-width: 768px) {
+  .top-banner .banner .item {
+    font-size: 0.7rem;
+    margin-left: 1.8rem;
+  }
+}
 .top-banner .banner .container {
   display: flex;
   margin-top: 9.5rem;
   column-gap: 3.3rem;
   justify-content: flex-start;
+}
+@media screen and (max-width: 768px) {
+  .top-banner .banner .container {
+    flex-direction: row;
+    margin: 6rem auto 0 0;
+    width: 100%;
+    justify-content: space-between;
+  }
 }
 .top-banner .banner .container p {
   background: #fff;
@@ -700,9 +761,21 @@ top
   font-size: 2rem;
   padding-left: 2rem;
 }
+@media screen and (max-width: 768px) {
+  .top-banner .banner .container p {
+    font-size: 1.5rem;
+    padding-left: 1.6rem;
+  }
+}
 .top-banner .banner .container .arrow {
   width: 3.2rem;
   transition: 0.4s;
+}
+@media screen and (max-width: 768px) {
+  .top-banner .banner .container .arrow {
+    width: 2.5rem;
+    margin-right: 2rem;
+  }
 }
 .top-banner .box:last-child::after {
   background-image: url(../images/banner02.jpg);
@@ -714,10 +787,22 @@ top
   margin-top: 8rem;
   align-items: flex-end;
 }
+@media screen and (max-width: 768px) {
+  .top-banner .box:last-child .banner .container {
+    margin-top: 6rem;
+  }
+}
 .top-banner .box:last-child .banner p {
   font-size: 1.6rem;
   width: fit-content;
   padding: 1px 1rem 0 2rem;
+}
+@media screen and (max-width: 768px) {
+  .top-banner .box:last-child .banner p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    padding: 2px 1rem 0 1.7rem;
+  }
 }
 .top-banner .box:hover {
   opacity: 1;
@@ -744,6 +829,12 @@ top
   grid-template-columns: 1fr 1fr;
   justify-items: center;
 }
+@media screen and (max-width: 768px) {
+  .top-product .container {
+    grid-template-columns: 1fr;
+    gap: 20vw 0;
+  }
+}
 .top-product .container .product-item {
   flex-basis: 47%;
   max-width: 330px;
@@ -765,6 +856,11 @@ top
   font-size: 1.4rem;
   margin-top: 1vw;
 }
+@media screen and (max-width: 768px) {
+  .top-product .container .product-item ul .price {
+    margin-top: 4vw;
+  }
+}
 .top-product .container .product-item ul .price span {
   font-size: 1rem;
   padding-left: 0.5rem;
@@ -776,10 +872,20 @@ top
   width: fit-content;
   margin: 0.6vw auto;
 }
+@media screen and (max-width: 768px) {
+  .top-product .container .product-item ul .post {
+    margin-top: 2vw;
+  }
+}
 .top-product .container .product-item ul .link {
   display: flex;
   justify-content: space-evenly;
-  margin-top: 0.8vvw;
+  margin-top: 0.8vw;
+}
+@media screen and (max-width: 768px) {
+  .top-product .container .product-item ul .link {
+    margin-top: 2vw;
+  }
 }
 .top-product .container .product-item ul .link .tgl {
   position: relative;
@@ -821,13 +927,19 @@ top
 footer {
   background: url(../images/footer.jpg) no-repeat;
   object-fit: cover;
-  padding: 8rem 0;
+  padding: 8rem 0 2rem;
   margin-top: 15rem;
 }
 footer .container {
   display: flex;
   color: #fff;
   column-gap: 1vw;
+}
+@media screen and (max-width: 768px) {
+  footer .container {
+    flex-direction: column;
+    row-gap: 3rem;
+  }
 }
 footer .container p, footer .container h3, footer .container li {
   font-size: 1.4rem;
@@ -880,6 +992,59 @@ footer .container .box a:hover::before {
 }
 footer .container .box:first-child {
   padding-left: 5vw;
+}
+@media screen and (max-width: 768px) {
+  footer .container .box:first-child {
+    padding: 0 0 3rem 0;
+    border-bottom: 1px solid #fff;
+  }
+}
+footer .copy {
+  font-size: 1rem;
+  text-align: center;
+  color: #fff;
+  margin-top: 8rem;
+}
+
+.blurTrigger, .blurslowTrigger {
+  opacity: 0;
+}
+
+/* ぼかしから出現 */
+.blur {
+  animation-name: blurAnime;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.delay2 {
+  animation-delay: 0.2s;
+}
+
+.delay4 {
+  animation-delay: 0.4s;
+}
+
+.delay6 {
+  animation-delay: 0.6s;
+}
+
+@keyframes blurAnime {
+  from {
+    filter: blur(10px);
+    transform: scale(1.02);
+    opacity: 0;
+  }
+  to {
+    filter: blur(0);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.blurslow {
+  animation-name: blurAnime;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
 }
 
 .test33 {

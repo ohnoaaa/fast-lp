@@ -10,20 +10,33 @@ top
 // kv
 .kv{
   height: 100vh;
+  width: 100vw;
   background: url(../images/fv_01.png) no-repeat;
-  background-size: 60%;
+  background-size: 55%;
   background-position: top right;
   position: relative;
+  @include c.mq(sm){
+    // background-size: 200%;
+    background-position: top center;
+    background: url(../images/sp-fv-bg.png) no-repeat;
+    background-size: auto;
+  }
   .logo{
     width: 15%;
     max-width: 210px;
     min-width: 200px;
     position: absolute;
     top: 50%;
-    left: 53%;
+    left: 50%;
     transform: translate( -50%, -50%);
     @include c.mq(lg){
-      left: 50%;
+      left: 46%;
+      
+    }
+    @include c.mq(sm){
+      width: 40%;
+      max-width: none;
+      min-width: auto;
     }
     img{
       object-fit: contain;
@@ -31,7 +44,6 @@ top
   }
   .scrolldown1{
     writing-mode: vertical-rl;
-    
     position: absolute;
     bottom: 5%;
     right: 1%;
@@ -116,6 +128,7 @@ top
 .top-concept{
   margin-top: 12rem;
   text-align: center;
+  
   h2{
     font-size: 2.7rem;
     font-weight: 500;
@@ -123,9 +136,14 @@ top
     font-family: v.$serif;
     letter-spacing: .2em;
     margin-top: 4rem;
+    line-height: 1.8;
   }
   .txtarea{
     margin-top: 4rem;
+    @include c.mq(sm){
+      width: 90%;
+      margin: 4rem auto;
+    }
     p{
       font-size: 1.4rem;
       font-weight: 200;
@@ -144,11 +162,22 @@ top
   background: #F5F6F4;
   padding: 8rem;
   margin: 8rem 0;
+  width: 100vw;
+  @include c.mq(sm){
+    padding: 3.5rem 0;
+  }
   .container{
     display: flex;
     // justify-content: space-between;
     justify-content: center;
     column-gap: 5%;
+    @include c.mq(sm){
+      flex-direction: column;
+      width: 90%;
+      margin:  0 auto;
+      row-gap: 4.3rem;
+      align-items: center;
+    }
   }
   .box{
     overflow: hidden;
@@ -156,6 +185,12 @@ top
     height: 220px;
     min-width: 380px;
     transition: .5s;
+    @include c.mq(sm){
+      min-width: auto;
+      height: 175px;
+      width: 320px;
+
+    }
     &::after{
       transition: .4s;
       content: '';
@@ -174,12 +209,18 @@ top
   }
   
   .banner{
-    position: relative;
+    position: absolute;
+    width: 100%;
+    height: 100%;
     z-index: 1;
+    top: 0;
     .logo-inner{
       width: 45%;
       padding-left: 2rem;
       margin-top: 1.5rem;
+      @include c.mq(sm){
+        width: 47%;
+      }
     }
     .item{
       font-size: 1rem;
@@ -189,22 +230,40 @@ top
       width: fit-content;
       margin-left: 2rem;
       margin-top: 1.1rem;
+      @include c.mq(sm){
+        font-size: .7rem;
+        margin-left: 1.8rem;
+      }
     }
     .container{
       display: flex;
       margin-top: 9.5rem;
       column-gap: 3.3rem;
       justify-content: flex-start;
+      @include c.mq(sm){
+        flex-direction: row;
+        margin: 6rem auto 0 0;
+        width: 100%;
+        justify-content: space-between;
+      }
       p{
         background: #fff;
         color: #664070;
         font-family: v.$serif;
         font-size: 2rem;
         padding-left: 2rem;
+        @include c.mq(sm){
+          font-size: 1.5rem;
+          padding-left: 1.6rem;
+        }
       }
       .arrow{
         width: 3.2rem;
         transition: .4s;
+        @include c.mq(sm){
+          width: 2.5rem;
+          margin-right: 2rem;
+        }
       }
     }
   }
@@ -217,11 +276,21 @@ top
       .container{
         margin-top: 8rem;
         align-items: flex-end;
+        @include c.mq(sm){
+          margin-top: 6rem;
+
+        }
       }
       p{
         font-size: 1.6rem;
         width: fit-content;
         padding: 1px 1rem 0 2rem;
+        @include c.mq(sm){
+          font-size: 1.2rem;
+          line-height: 1.8;
+          padding: 2px 1rem 0 1.7rem;
+
+        }
       }
     }
   }
@@ -255,6 +324,10 @@ top
     grid-template-columns: 1fr 1fr;
     // grid-template-columns: repeat(auto-fit, 100px);
     justify-items: center;
+    @include c.mq(sm){
+      grid-template-columns: 1fr;
+      gap: 20vw 0
+    }
     .product-item{
       flex-basis: 47%;
       max-width: 330px;
@@ -277,6 +350,9 @@ top
         .price{
           font-size: 1.4rem;
           margin-top: 1vw;
+          @include c.mq(sm){
+            margin-top: 4vw;
+          }
           span{
             font-size: 1rem;
             padding-left: .5rem;
@@ -288,11 +364,17 @@ top
           padding: 2px 1rem;
           width: fit-content;
           margin: .6vw auto;
+          @include c.mq(sm){
+            margin-top: 2vw;
+          }
         }
         .link{
           display: flex;
           justify-content: space-evenly;
-          margin-top: .8vvw;
+          margin-top: .8vw;
+          @include c.mq(sm){
+            margin-top: 2vw;
+          }
           .tgl{
             position: relative;
             font-size: 1.4rem;
@@ -341,12 +423,17 @@ top
 footer{
   background: url(../images/footer.jpg) no-repeat;
   object-fit: cover;
-  padding: 8rem 0;
+  padding: 8rem 0 2rem;
   margin-top: 15rem;
   .container{
     display: flex;
     color: #fff;
     column-gap: 1vw;
+    @include c.mq(sm){
+      flex-direction: column;
+      row-gap: 3rem;
+      // align-items: center;
+    }
     p,h3,li{
       font-size: 1.4rem;
       letter-spacing: .1em;
@@ -359,8 +446,14 @@ footer{
       font-weight: 200;
     }
     .box{
+      @include c.mq(sm){
+        // text-align: center;
+      }
       h2{
         width: 50%;
+        @include c.mq(sm){
+          // margin: 1rem auto;
+        }
       }
       h3{
         margin-top: 4rem;
@@ -407,6 +500,55 @@ footer{
     }
     .box:first-child{
       padding-left: 5vw;
+      @include c.mq(sm){
+        padding: 0 0 3rem 0;
+        border-bottom: 1px solid #fff;
+
+      }
     }
   }
+  .copy{
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    margin-top: 8rem;
+  }
+}
+//ぼかしから出現
+.blurTrigger,.blurslowTrigger{
+  opacity: 0;
+}
+/* ぼかしから出現 */
+.blur{
+	animation-name:blurAnime;
+	animation-duration:1s;
+	animation-fill-mode:forwards;
+}
+
+.delay2{
+  animation-delay: .2s;
+}
+.delay4{
+  animation-delay: .4s;
+}
+.delay6{
+  animation-delay: .6s;
+}
+@keyframes blurAnime{
+  from {
+	filter: blur(10px);
+	transform: scale(1.02);
+  opacity: 0;
+  }
+
+  to {
+	filter: blur(0);
+	transform: scale(1);
+  opacity: 1;
+  }
+}
+.blurslow{
+	animation-name:blurAnime;
+	animation-duration:2s;
+	animation-fill-mode:forwards;
 }
