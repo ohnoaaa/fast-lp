@@ -509,7 +509,7 @@ top
 .kv {
   height: 100vh;
   width: 100%;
-  background: url(../images/fv_01.png) no-repeat;
+  background: url(../img/fv_01.png) no-repeat;
   background-size: 55%;
   background-position: top right;
   display: flex;
@@ -520,7 +520,7 @@ top
 @media screen and (max-width: 768px) {
   .kv {
     background-position: top center;
-    background: url(../images/sp-fv-bg.png) no-repeat;
+    background: url(../img/sp-fv-bg.png) no-repeat;
     background-size: contain;
   }
 }
@@ -688,7 +688,7 @@ top
   position: absolute;
   width: 100%;
   height: 100%;
-  background: url(../images/banner01.jpg) no-repeat;
+  background: url(../img/banner01.jpg) no-repeat;
   padding: 1.2rem 0;
   background-size: cover;
   background-position: center;
@@ -766,7 +766,7 @@ top
   }
 }
 .top-banner .box:last-child::after {
-  background-image: url(../images/banner02.jpg);
+  background-image: url(../img/banner02.jpg);
 }
 .top-banner .box:last-child .banner {
   text-align: left;
@@ -883,7 +883,7 @@ top
   content: "";
   width: 8.5px;
   height: 8px;
-  background: url(../images/tggl-r.png) no-repeat;
+  background: url(../img/tggl-r.png) no-repeat;
   background-size: contain;
   display: inline-block;
   position: absolute;
@@ -913,7 +913,7 @@ top
           footer
 =================================*/
 footer {
-  background: url(../images/footer.jpg) no-repeat;
+  background: url(../img/footer.jpg) no-repeat;
   object-fit: cover;
   padding: 8rem 0 2rem;
   margin-top: 15rem;
@@ -967,7 +967,7 @@ footer .container .box nav .tgl::before {
   content: "";
   width: 5px;
   height: 8px;
-  background: url(../images/w-tgl-r.png) no-repeat;
+  background: url(../img/w-tgl-r.png) no-repeat;
   position: absolute;
   background-size: contain;
   top: 50%;
