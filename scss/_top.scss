@@ -14,29 +14,36 @@ top
   background: url(../images/fv_01.png) no-repeat;
   background-size: 55%;
   background-position: top right;
-  position: relative;
+  // position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  
   @include c.mq(sm){
-    // background-size: 200%;
+    // background-size: 100%;
     background-position: top center;
     background: url(../images/sp-fv-bg.png) no-repeat;
-    background-size: auto;
+    background-size: contain;
   }
   .logo{
-    width: 15%;
+    width: 20%;
+    text-align: center;
+    // width: 15%;
     max-width: 210px;
     min-width: 200px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate( -50%, -50%);
+    // position: absolute;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate( -50%, -50%);
     @include c.mq(lg){
-      left: 46%;
+      // left: 46%;
       
     }
     @include c.mq(sm){
-      width: 40%;
-      max-width: none;
-      min-width: auto;
+      // width: 40%;
+      // max-width: none;
+      // min-width: auto;
     }
     img{
       object-fit: contain;
@@ -45,6 +52,7 @@ top
   .scrolldown1{
     writing-mode: vertical-rl;
     position: absolute;
+    // position: relative;
     bottom: 5%;
     right: 1%;
     p{

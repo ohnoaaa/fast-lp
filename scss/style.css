@@ -512,35 +512,23 @@ top
   background: url(../images/fv_01.png) no-repeat;
   background-size: 55%;
   background-position: top right;
-  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 @media screen and (max-width: 768px) {
   .kv {
     background-position: top center;
     background: url(../images/sp-fv-bg.png) no-repeat;
-    background-size: auto;
+    background-size: contain;
   }
 }
 .kv .logo {
-  width: 15%;
+  width: 20%;
+  text-align: center;
   max-width: 210px;
   min-width: 200px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-@media screen and (min-width: 1499px) {
-  .kv .logo {
-    left: 46%;
-  }
-}
-@media screen and (max-width: 768px) {
-  .kv .logo {
-    width: 40%;
-    max-width: none;
-    min-width: auto;
-  }
 }
 .kv .logo img {
   object-fit: contain;
